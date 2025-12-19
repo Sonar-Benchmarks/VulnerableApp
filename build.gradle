@@ -17,13 +17,15 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
+// [1/2] There is no compatible version of this plugin anymore (source code: Java 8; build with Java 21 which requires Gradle 8.5).
+// apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-bootJar {
-    baseName = 'VulnerableApp'
-    version =  '1.0.0'
-}
+// [2/2] There is no compatible version of this plugin anymore (source code: Java 8; build with Java 21 which requires Gradle 8.5).
+// bootJar {
+//     baseName = 'VulnerableApp'
+//     version =  '1.0.0'
+// }
 
 configurations {
     all {
